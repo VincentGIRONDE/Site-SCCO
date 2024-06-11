@@ -1,0 +1,54 @@
+@font-face {
+  font-family: gilda;
+  src: url(../fonts/GildaDisplay-Regular.ttf);
+  font-weight: 200 700;
+}
+@font-face {
+  font-family: barlow;
+  src: url(../fonts/BarlowCondensed-Regular.ttf);
+  font-weight: 300 700;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: gilda;
+  font-weight: 400;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 20px;
+}
+p {
+  font-family: barlow;
+  line-height: 1.5;
+}
+#title {
+  font-size: 55px;
+}
+#titre {
+  z-index: 3;
+}
+
+#navbar {
+  z-index: 2;
+  position: sticky;
+  top: 2px;
+  font-family: barlow;
+}
+span {
+  color: burlywood;
+  font-size: 50px;
+}
+footer .btn {
+  object-position: center;
+}
+footer a {
+  object-position: end;
+}
