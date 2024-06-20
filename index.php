@@ -40,6 +40,7 @@
       </div>
       <button
         class="carousel-control-prev"
+        style="--carousel-control-color: black"
         type="button"
         data-bs-target="#carousel"
         data-bs-slide="prev"
@@ -49,6 +50,7 @@
       </button>
       <button
         class="carousel-control-next"
+        style="--carousel-control-color: black"
         type="button"
         data-bs-target="#carousel"
         data-bs-slide="next"
