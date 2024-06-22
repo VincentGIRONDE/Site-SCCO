@@ -13,6 +13,7 @@ function dbConnection():PDO
     $mysqlErrorCodes =[
         1045 => 'Access denied',
         1049 => 'Unknow database',
+        1064 => 'syntax error',
     ];
     try{
         $pdo = new PDO(
@@ -25,18 +26,28 @@ function dbConnection():PDO
         );
     return $pdo;
 } catch (PDOException $e) {
-    //throw new PDOException($e->getMessage(), $e->getcode ()) ;
-    exit( $mysqlErrorCodes[ $e ->getCode() ] ?? "Error");
+    throw new PDOException($e->getMessage(), $e->getcode ()) ;
+    //exit( $mysqlErrorCodes[ $e ->getCode() ] ?? "Error");
 }
 }
 
-//fonction insertion utilisateur
+//fonction insertion utilisateur et création info adhérent
 function insertUser(array $values):void
 {
     $connection = dbConnection();
     $sql = '
+        START TRANSACTION;
+
         INSERT INTO project.user
-        VALUE(NULL, :name, :surname, :email, :password, 0)
+        VALUE(NULL, :name, :surname, :email, :password, 0);
+
+        SET @id = LAST_INSERT_ID();
+
+        INSERT INTO project.info
+        VALUE(NULL, @id, NULL, NULL );
+
+        COMMIT;
+
     ';
     $query = $connection->prepare($sql);
     try {
@@ -47,10 +58,11 @@ function insertUser(array $values):void
             'password' => password_hash($values['password'], PASSWORD_BCRYPT),
         ]);
     } catch (PDOException $e) {
-        //throw new PDOException($e->getMessage(), $e->getCode());
-        exit( $GLOBALS['mysqLErrorCodes'][ $e ->getCode() ] ?? 'Error');
+        throw new PDOException($e->getMessage(), $e->getCode());
+        //exit( $GLOBALS['mysqLErrorCodes'][ $e ->getCode() ] ?? 'Error');
     }
 }
+
 
 //vérification utilisateur par identifiant (e-mail)
 function userByLoginIsExist(string $login):bool
@@ -128,8 +140,10 @@ function getUserInfoById(int $id):array|bool
     $connection = dbConnection();
 
     $sql = '
-        SELECT info.*
+        SELECT info.*, user.name, user.surname
         FROM project.info
+        LEFT JOIN project.user
+        ON info.user_id = user.id
         WHERE info.user_id = :id
     ';
 
@@ -170,4 +184,49 @@ function getAllUserInfo():array
     }
 }
 
+//fonction mise à jour des informations adhérents par l'administrateur
+function updateInfoUser(array $values):void
+{
+    $connection = dbConnection();
+    $sql = '
+        UPDATE project.info
+        SET license = :license, medals = :medals  
+        WHERE info.user_id = :id     
+    ';
+    $query = $connection->prepare($sql);
+    try {
+        //$user = getUserInfoById($values[$id]);
+        $query->execute([
+            'id' => $_GET['id'],
+            'license' => $values['license'],
+            'medals' => $values['medals'],
+        ]);
+    } catch (PDOException $e) {
+        throw new PDOException($e->getMessage(), $e->getCode());
+        //exit( $GLOBALS['mysqLErrorCodes'][ $e ->getCode() ] ?? 'Error');
+    }
+}
+
+//fonction mise à jour de nom et prénom de l'adhérent par l'administrateur
+function updateUser(array $values):void
+{
+    $connection = dbConnection();
+    $sql = '
+        UPDATE project.user
+        SET name = :name, surname = :surname
+        WHERE user.id = :id     
+    ';
+    $query = $connection->prepare($sql);
+    try {
+        //$user = getUserInfoById($values[$id]);
+        $query->execute([
+            'id' => $_GET['id'],
+            'name' => $values['name'],
+            'surname' => $values['surname'],
+        ]);
+    } catch (PDOException $e) {
+        throw new PDOException($e->getMessage(), $e->getCode());
+        //exit( $GLOBALS['mysqLErrorCodes'][ $e ->getCode() ] ?? 'Error');
+    }
+}
 ?>

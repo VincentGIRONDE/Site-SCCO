@@ -35,6 +35,15 @@ function processLoginForm():void
     }
 }
 
+function validFormUserInfo():void
+{
+    if(isSubmitted() && isValidFormUserInfo()){
+        updateInfoUser(getValues());
+        updateUser(getValues());
+       header('location: userinfo.php');
+    }
+}
+
 function isSubmitted():bool{
     return isset($_POST['submit']);
 }
@@ -123,4 +132,28 @@ function isNotBlank(string|null $field):bool
     return !empty($field);
 }
 
+function isValidFormUserInfo():bool
+{
+   
+    $contraint =[
+        'name' => [
+            'isValidate' => isNotBlank( getvalues()['name'] ),
+            'message' => 'Remplir le nom'
+        ],
+        'surname' => [
+            'isValidate' => isNotBlank( getvalues()['surname'] ),
+            'message' => 'Remplir le prénom'
+        ],
+        'license' => [
+            'isValidate' => isNotBlank( getvalues()['license'] ),
+            'message' => 'Remplir la licence'
+        ],
+        'medals' => [
+            'isValidate' => isNotBlank( getvalues()['medals'] ),
+            'message' => 'Remplir la médaille obtenue'
+        ],
+    ];
+
+    return checkContraint($contraint);
+}
 ?>

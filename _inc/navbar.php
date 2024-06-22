@@ -39,7 +39,7 @@
             >
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link active" aria-current="page" href="#"
+            <a class="nav-link active" aria-current="page" href="/synchro.php"
               >Patinage synchronisé</a
             >
           </li>

@@ -33,11 +33,5 @@ VALUES
     (NULL, 2, 15041, 'Pré bronze de Danse')
     ;
 
-/* CREATE TABLE project.user_info(
-    user_id TINYINT UNSIGNED,
-    info_id TINYINT UNSIGNED,
-    PRIMARY KEY(user_id, info_id),
-    FOREIGN KEY(user_id) REFERENCES project.user(id) ON DELETE CASCADE,
-    FOREIGN KEY(info_id) REFERENCES project.info(id)
-); */
+
 

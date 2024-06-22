@@ -19,7 +19,7 @@ var_dump($user);
 <?php
     require_once '../_inc/navbar.php';
 ?>
-    <H1>Adminsitrateur</H1>
+    <H1>Administrateur</H1>
 
     <p>
         licence :

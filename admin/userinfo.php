@@ -3,9 +3,9 @@ session_start();
 require_once '../_inc/functions.php';
 require_once '../_inc/functions_form.php';
 userIsConnected();
-var_dump ($_SESSION);
+//var_dump ($_SESSION);
 $users = getAllUserInfo();
-var_dump($users);
+//var_dump($users);
 ?>
 
 
