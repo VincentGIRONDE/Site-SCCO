@@ -6,6 +6,7 @@ $mysqLErrorCodes=[
     '42S02' => 'Unknow table',
     4200 => 'Unknow database',
     1062 => 'Vous êtes déjà enregistré',
+    1451 => 'Integrity constraint violation',
 ];
 
 function dbConnection():PDO
@@ -229,4 +230,29 @@ function updateUser(array $values):void
         //exit( $GLOBALS['mysqLErrorCodes'][ $e ->getCode() ] ?? 'Error');
     }
 }
+
+//Effacer une adhérent
+function removeUser(int $id):void
+{
+    $connection = dbConnection();
+
+    $sql = '
+        DELETE FROM project.info WHERE info.user_id = :id;
+
+        DELETE FROM project.user WHERE user.id = :id;
+
+    ';
+
+    $query = $connection->prepare($sql);
+
+    try {
+        $query->execute([
+            'id' => $id
+        ]);
+    } catch (PDOException $e) {
+        throw new PDOException($e->getMessage(), $e->getcode ()) ;
+        //exit( $mysqlErrorCodes[ $e ->getCode() ] ?? "Error");
+    }
+}
+
 ?>

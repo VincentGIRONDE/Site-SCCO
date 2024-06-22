@@ -11,8 +11,8 @@ function registerForm():void
 
 function processLoginForm():void
 {
-    if(isSubmitted() && isValidLogin()){
-        //echo'Vous êtes connecté à votre compte';
+    if(isSubmitted() && isValidLogin())
+    {
         if(checkUser(getValues())){
             $_SESSION['isConnected'] = true;
             $_SESSION['user'] = getUserByLogin(getValues()['email']);
@@ -24,13 +24,10 @@ function processLoginForm():void
                 header('location: /profil/index.php');
                 exit;
             }
-
         }
         else {
-            array_push($_SESSION, "L'adresse mail ou le mot de passe n'est pas enregistré dans notre base de donnée");
+            $_SESSION['nonvalide'] = "L'adresse mail ou le mot de passe n'est pas enregistré dans notre base de donnée";
         header('location: ../user.php');
-        var_dump ($_SESSION);
-        echo "False";
         }
     }
 }

@@ -27,7 +27,8 @@ $users = getAllUserInfo();
         <th>Prénom</th>
         <th>Licence</th>
         <th>Dernière médaille obtenue</th>
-        <th>Action</th>
+        <th>Action 1</th>
+        <th>Action 2</th>
     </tr>
 <?php
 foreach ($users as $key => $value) {
@@ -39,7 +40,9 @@ foreach ($users as $key => $value) {
     <td>{$value['medals']}</td>
     <td>
     <a href='formuserinfo.php?id={$value['id']}'>Modifier</a>
-
+    </td>
+    <td>
+    <a href='remove.php?id={$value['id']}'>Supprimer</a>
     </td>
 
     </tr>

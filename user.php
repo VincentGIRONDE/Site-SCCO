@@ -2,7 +2,7 @@
 session_start();
 require_once '_inc/functions.php';
 require_once '_inc/functions_form.php';
-//var_dump ($_SESSION);
+var_dump($_SESSION);
 ?>
 
 
@@ -16,6 +16,11 @@ require_once '_inc/functions_form.php';
     require_once '_inc/navbar.php';
 ?>
     <H1>VIP Zone</H1>
+<p>
+    <?php echo $_SESSION['nonvalide'] ?? NULL;
+    $_SESSION['nonvalide'] = '';
+    ?>
+</p>
 
     <?php
         if(isset($_SESSION['isConnected'])){
