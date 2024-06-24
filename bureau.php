@@ -14,6 +14,7 @@
           <h1>Histoire du Skating Club de Compiègne Oise</h1>
           <p>
             Association sportive crée en ...., elle a depuis formé de nombreux patineurs et patineuses en patinage artistique et patinage synchronisé.
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quibusdam facere unde! Velit exercitationem aperiam itaque veniam, atque blanditiis. Illo accusantium mollitia unde beatae nostrum.
           </p>
           <p>
             Son bureau exécutif est exclusivement composé de personnes bénévoles qui oeuvrent au bon fonctionnement de l'association sportive.

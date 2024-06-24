@@ -6,7 +6,7 @@ userIsConnected();
 //var_dump ($_SESSION);
 $user_id = $_GET['id'];
 $user = getUserInfoById($user_id);
-var_dump($user);
+//var_dump($user);
 validFormUserInfo()
 ?>
 

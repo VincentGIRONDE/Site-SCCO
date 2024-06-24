@@ -42,9 +42,9 @@
         <h2 id="contact">Prendre contact avec l'association</h2>
         <label class="form-label pt-2 ps-3" for="Name">Nom :</label>
         <input type="text" class="form-control bg-secondary" />
-        <label class="form-label pt-2 ps-3" for="">Email :</label>
+        <label class="form-label pt-2 ps-3" for="email">Email :</label>
         <input type="text" class="form-control bg-secondary" />
-        <label class="form-label pt-2 ps-3" for="">Message :</label>
+        <label class="form-label pt-2 ps-3" for="message">Message :</label>
         <textarea
           class="form-control bg-secondary"
           name="message"

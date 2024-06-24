@@ -19,23 +19,23 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere animi modi itaque consectetur deleniti hic veritatis, eligendi rem eum quasi eos incidunt saepe amet, doloremque in corporis sed illo aliquid?
           </p>
         </div>
-            <div class="row text-center gap-3 my-3 flex-column flex-md-row">
-              <div class="col col-5 pt-5">
+            <div class="row text-center gap-0 my-3 flex-column flex-md-row">
+              <div class="col col-3 pt-5">
                 <h3>Ice angels Juvénile</h3> <br> 
                 <img src="img/Patinage/iceangels.jpeg" alt="patins" class="img-fluid">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, temporibus.
               </div>
-              <div class="col col-5 pt-5">
+              <div class="col col-3 pt-5">
                 <h3>Magic Crystals Novice Basic</h3> <br>
                 <img src="img/Patinage/magiccrystals.jpeg" alt="patins" class="img-fluid">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, unde ut, suscipit et architecto corrupti reiciendis odit mollitia iste enim sequi ab minima exercitationem saepe? Iste voluptas aut animi incidunt!
               </div>
-              <div class="col col-5 pt-5">
+              <div class="col col-3 pt-5">
                 <h3>Black diam's Junior</h3> <br> 
                 <img src="img/Patinage/blackdiamsjunior.jpeg" alt="patins" class="img-fluid">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit libero rerum possimus necessitatibus saepe ad, reprehenderit quidem odio, natus beatae excepturi, inventore commodi nam sit.
               </div>
-              <div class="col col-5 pt-5">
+              <div class="col col-3 pt-5">
                 <h3>Black diam's Sénior</h3> <br>
                 <img src="img/Patinage/blackdiamssenior.jpeg" alt="patins" class="img-fluid">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam necessitatibus sit, laboriosam voluptates quasi aspernatur?
