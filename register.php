@@ -34,9 +34,10 @@ registerForm();
         <label>Password :</label>
         <input type="password" name="password" value="<?= getValues()['password'] ?? null ?>">
     </p>
+    <p>
         <input type="radio" name="agree" value="yes" <?= isset(getValues()['agree']) && getValues()['agree'] === 'yes' ? 'checked' : null ; ?>
         >
-        <label >En créant un compte, je comprends et j'accepte l'<strong>Avis de confidentialité</strong> et les <strong>Conditions d'utilisations</strong>.</label>
+        <label >En créant un compte, je comprends et j'accepte l'utilisation de mon nom et mon prénom dans la base de donnée de l'association.<br>Ce à titre purement privée dans le cadre de la gestion des adhérents de l'association.</label>
     </p>
     <p>
         <input type="submit" name="submit">

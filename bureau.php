@@ -22,10 +22,10 @@
         </div>
             <div class="row text-center gap-3 my-3 flex-column flex-md-row">
               <div class="col col-3 pt-5">
-                <h3>Président</h3> <br> Mr RAVASIO Michel
+                <h3>Président</h3> <br> Mr RAVASIO Michel <br> <img src="img/Patinage/Portarit Homme vieux.jpg" class="d-block w-75 h-75 mx-auto" alt="..." />
               </div>
               <div class="col col-3 pt-5">
-                <h3>Vice présidente</h3> <br> Mme TEETEN Cathy
+                <h3>Vice présidente</h3> <br> Mme TEETEN Cathy <br> <img src="img/Patinage/Portarit Femme jeune.jpg" class="d-block w-75 h-75 mx-auto" alt="..." />
               </div>
               <div class="col col-3 pt-5">
                 <h3>Trésorière</h3> <br> Mme VOYNEAU Nassima
@@ -46,20 +46,10 @@
                 <h3>Responsable section synchro</h3> <br> Mme MUSCEDERE-SNOECK Coralie
               </div>
               <div class="col col-3 pt-5">
-                <h3>Chargé des réseaux sociaux</h3> <br> Mr DA SILVA José
+                <h3>Chargé des réseaux sociaux</h3> <br> Mr DA SILVA José <br> <img src="img/Patinage/Portarit Homme jeune.jpg" class="d-block w-75 h-75 mx-auto" alt="..." />
               </div>
             </div>
          
-          
-        
-        <div class="row col-md-6">
-          <div class="col col-6 p-1 mt-3">
-            <img src="img/Patinage/Débutants.jpg" alt="patins" class="img-fluid" />
-          </div>
-          <div class="col col-6 p-1 mt-3">
-            <img src="img/Patinage/BDJ.jpg" alt="patineuse" class="img-fluid" />
-          </div>
-        </div>
       </main>
 
 <?php

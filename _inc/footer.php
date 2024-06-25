@@ -37,30 +37,31 @@
           </div>
         </div>
       </article>
-<div class="row vw-100 bg-black position-absolute">
-      <form class="col col-auto m-auto w-75 p-2 text-white">
+<!-- <div class="row vw-100 bg-black position-absolute">
+      <form method="post" class="col col-auto m-auto w-75 p-2 text-white">
         <h2 id="contact">Prendre contact avec l'association</h2>
-        <label class="form-label pt-2 ps-3" for="Name">Nom :</label>
-        <input type="text" class="form-control bg-secondary" />
-        <label class="form-label pt-2 ps-3" for="email">Email :</label>
-        <input type="text" class="form-control bg-secondary" />
+        <label class="form-label pt-2 ps-3" for="nom" id="nom">Nom :</label>
+        <input type="text" required class="form-control bg-secondary" />
+        <label class="form-label pt-2 ps-3" for="courriel" id="courriel">Adresse de courriel :</label>
+        <input type="text" required class="form-control bg-secondary" />
         <label class="form-label pt-2 ps-3" for="message">Message :</label>
         <textarea
+          required
           class="form-control bg-secondary"
           name="message"
           cols="30"
           rows="2"
         ></textarea>
         <p class="text-center">
-        <input
+         <input
           class="btn mt-2 btn-outline-secondary text-white btn-close-white"
           type="Submit"
           value="Submit"
-        >
-      </p>
+          >
+        </p>
+
         <a class="nav-link active mt-3" aria-current="page" href="#top"
-          >Accueil</a
-        >
-    </form>
-</div>
+          >Haut de la page</a>
+      </form>    
+</div> -->
 </footer>

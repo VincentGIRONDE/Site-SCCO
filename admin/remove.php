@@ -2,6 +2,7 @@
 session_start();
 require_once '../_inc/functions.php';
 require_once '../_inc/functions_form.php';
+userIsConnected();
 $id = $_GET['id'];
 removeUser($id);
 ?>

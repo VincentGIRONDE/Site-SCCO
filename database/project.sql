@@ -33,5 +33,11 @@ VALUES
     (NULL, 2, 15041, 'Pré bronze de Danse')
     ;
 
+CREATE TABLE project.message{
+    id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(50),
+    courriel VARCHAR(50),
+    message VARCHAR(200),
+}
 
 

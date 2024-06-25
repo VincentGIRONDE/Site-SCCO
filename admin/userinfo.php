@@ -22,6 +22,7 @@ $users = getAllUserInfo();
     <H1>Administrer les infos</H1>
 
 <table>
+    <thead>
     <tr>
         <th>Nom</th>
         <th>Prénom</th>
@@ -30,9 +31,11 @@ $users = getAllUserInfo();
         <th>Action 1</th>
         <th>Action 2</th>
     </tr>
+    </thead>
 <?php
 foreach ($users as $key => $value) {
     echo "
+    <tbody>
     <tr>
     <td>{$value['name']}</td>
     <td>{$value['surname']}</td>
@@ -44,8 +47,8 @@ foreach ($users as $key => $value) {
     <td>
     <a href='remove.php?id={$value['id']}'>Supprimer</a>
     </td>
-
     </tr>
+    </tbody>
     ";
 };
 ?>

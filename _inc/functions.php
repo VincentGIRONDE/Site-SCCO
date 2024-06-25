@@ -250,9 +250,31 @@ function removeUser(int $id):void
             'id' => $id
         ]);
     } catch (PDOException $e) {
-        throw new PDOException($e->getMessage(), $e->getcode ()) ;
-        //exit( $mysqlErrorCodes[ $e ->getCode() ] ?? "Error");
+        //throw new PDOException($e->getMessage(), $e->getcode ()) ;
+        exit( $mysqlErrorCodes[ $e ->getCode() ] ?? "Error");
     }
 }
+
+/* //fonction insertion message contact
+function insertmessage():void
+{
+    $connection = dbConnection();
+    $sql = '
+       INSERT INTO project.message
+       VALUE (NULL, :nom, :courriel, :message)   
+    ';
+    $query = $connection->prepare($sql);
+    try {
+        //$user = getUserInfoById($values[$id]);
+        $query->execute([
+            'nom' => $_POST['nom'],
+            'courriel' => $_POST['courriel'],
+            'message' => $_POST['message'],
+        ]);
+    } catch (PDOException $e) {
+        throw new PDOException($e->getMessage(), $e->getCode());
+        //exit( $GLOBALS['mysqLErrorCodes'][ $e ->getCode() ] ?? 'Error');
+    }
+} */
 
 ?>

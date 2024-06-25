@@ -2,7 +2,7 @@
 session_start();
 require_once '_inc/functions.php';
 require_once '_inc/functions_form.php';
-var_dump($_SESSION);
+//var_dump($_SESSION);
 ?>
 
 
@@ -36,6 +36,7 @@ var_dump($_SESSION);
             echo '
                 <p>
                     <a href="/register.php">S\'enregistrer</a>
+                    <br>
                     <a href="/login.php">Se connecter</a>
                 </p>';
         }

@@ -11,21 +11,9 @@
 
       <div
         id="titre"
-        class="position-absolute text-white top-50 start-50 translate-middle align-items-center"
-      >
+        class="position-absolute text-white top-50 start-50 translate-middle align-items-center">
         <h1 id="title" class="text-center">Skating Club Compiègne Oise</h1>
-        <p class="text-center">Patinage artistique et synchronisé</p>
-        <p class="text-center">
-<!--         <a
-          id="rs"
-          class="btn btn-outline-secondary text-black mx-auto"
-          style="--bs-btn-border-color: white"
-          href="#rooms2"
-          role="button"
-        >
-          Rooms & Suite
-        </a> -->
-      </p>
+        <p class="  text-center">Patinage artistique et synchronisé</p>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">

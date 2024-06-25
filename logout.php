@@ -17,9 +17,5 @@ disconnected();
 ?>
     <H1>Logout</H1>
 
-
-   
-
-
 </form>
 </body>
