@@ -24,7 +24,7 @@ CREATE TABLE project.info(
 INSERT INTO project.user
 VALUES
     (NULL, 'GIRONDE', 'Vincent', 'vgironde@gmail.com', '$2y$10$zb.yXVARloXxDLlngXczzOWY5MmXIPD1v.4CGg19cr.9gZvIdH33y', 1),
-    (NULL, 'GIRONDE', 'Laetitia', 'laeti@gmail.com', '$2y$10$zb.yXVARloXxDLlngXczzOWY5MmXIPD1v.4CGg19cr.9gZvIdH33y', 0)
+    (NULL, 'GIRONDE', 'Laetitia', 'laeti@gmail.com', '$2y$10$zb.yXVARloXxDLlngXczzOWY5MmXIPD1v.4CGg19cr.9gZvIdH33y', 1)
     ;
 
 INSERT INTO project.info
@@ -33,11 +33,6 @@ VALUES
     (NULL, 2, 15041, 'Pré bronze de Danse')
     ;
 
-CREATE TABLE project.message{
-    id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    nom VARCHAR(50),
-    courriel VARCHAR(50),
-    message VARCHAR(200),
-}
+
 
 
